@@ -1,6 +1,7 @@
 package Tests.Android;
 
 import Tests.TestBase;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -13,6 +14,7 @@ import static org.openqa.selenium.By.id;
 
 public class SearchTests extends TestBase {
     @Test
+    @Tag("android")
     void searchTest() {
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();
@@ -23,6 +25,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
+    @Tag("android")
     void ebayTest() {
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();

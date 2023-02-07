@@ -1,6 +1,7 @@
 package Tests.Ios;
 
 import Tests.TestBase;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -11,6 +12,7 @@ import static org.openqa.selenium.By.id;
 
 public class IosTests extends TestBase {
     @Test
+    @Tag("ios")
     void searchTestIos(){
         step("Click Text Button", () -> {
             $(id("Text Button")).click();
