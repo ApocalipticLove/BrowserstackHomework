@@ -22,7 +22,7 @@ public class IosTests extends TestBase {
             assertEquals("Waiting for text input.", $(id("Text Output")).getText());
         });
 
-        step(format("Set value %s in the input field and press enter", "hello@browserstack.com"), () -> {
+        step(format("Set value", "hello@browserstack.com"), () -> {
             $(id("Text Input")).click();
             $(id("Text Input")).sendKeys("hello@browserstack.com");
             $(id("Text Input")).pressEnter();
@@ -32,4 +32,5 @@ public class IosTests extends TestBase {
             assertEquals("hello@browserstack.com", $(id("Text Output")).getText());
         });
     }
+
 }
