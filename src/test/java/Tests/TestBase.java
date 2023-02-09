@@ -28,12 +28,8 @@ public class TestBase {
     @AfterEach
     void addAttachments() {
         String sessionId = sessionId().toString();
-
-//        Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
-
         closeWebDriver();
-
         Attach.addVideo(sessionId);
     }
 }
